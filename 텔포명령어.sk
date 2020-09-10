@@ -39,7 +39,7 @@ command /battle:
 
 command /icespawn:
     trigger:
-        execute console command "mvtp %player% world""
+        execute console command "mvtp %player% world"
         execute console command "minecraft:tp %player% -2757.5 67 4636"
 
 command /junglespawn:
