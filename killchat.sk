@@ -1,6 +1,6 @@
 on death of player:
     if attacker is player:
-        set the death message to "%attacker%님이 %victim%님을 %attcker's tool%로 살해하였습니다."
+        set the death message to "%attacker%님이 %victim%님을 %attacker's tool%로 살해하였습니다."
         stop
     if attacker is a zombie:
         set the death message to "%victim%님이 좀비에게 물려 사망하였습니다."
