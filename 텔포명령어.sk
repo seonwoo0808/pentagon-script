@@ -1,6 +1,7 @@
 command /trade:
     trigger:
-        execute console command "world"
+        execute console command "mvtp %player% world"
+        wait 1 ticks
         execute console command "minecraft:tp %player% 87 65 101"
 command /killme:
     trigger:
@@ -33,22 +34,22 @@ command /other:
 
 command /battle:
     trigger:
-        execute console command "world"
+        execute console command "mvtp %player% world"
         execute console command "minecraft:tp %player% 72 112 243"
 
 command /icespawn:
     trigger:
-        execute console command "world"
+        execute console command "mvtp %player% world""
         execute console command "minecraft:tp %player% -2757.5 67 4636"
 
 command /junglespawn:
     trigger:
-        execute console command "world"
+        execute console command "mvtp %player% world"
         execute console command minecraft:"tp %player% -8566.5 63 5780.5"
 
 command /forrestspawn:
     trigger:
-        execute console command "world"
+        execute console command "mvtp %player% world"
         execute console command "minecraft:tp %player% 5528.5 64 8536.5"
 
 command /getbook:
@@ -82,7 +83,7 @@ command /townhall:
 
 command /police:
     trigger:
-        execute console command "world"
+        execute console command "mvtp %player% world"
         execute console command "minecraft:tp %player% 68 69 141"
 
 command /law:
@@ -142,7 +143,7 @@ command /jumpmap [<string>]:
 
 command /nether:
     trigger:
-        execute console command "world"
+        execute console command "mvtp %player% world"
         execute console command "minecraft:tp %player% -79 66 61"  
 
 command /casino:
