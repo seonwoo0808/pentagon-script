@@ -1,0 +1,26 @@
+on death of player:
+    if attacker is player:
+        set the death message to "%attacker%님이 %victim%님을 %attcker's tool%로 살해하였습니다."
+        stop
+    if attacker is a zombie:
+        set the death message to "%victim%님이 좀비에게 물려 사망하였습니다."
+        stop
+    if attacker is a creeper:
+        set the death message to "%victim%님이 크리퍼에게 터져 사망하였습니다."
+        stop
+    if attacker is a spider:
+        set the death message to "%victim%님이 거미에게 물려 사망하였습니다."
+        stop
+    if damage was caused by fall:
+        set the death message to "%victim%님이 낙사했습니다"
+        stop
+    if damage was caused by void:
+        set the death message to "%victim%님이 월드 밖을 모험하다가 사망하였습니다"
+        stop
+    if damage was caused by drowning:
+        set the death message to "%victim%님이 익사했습니다"
+        stop
+    if damage was caused by lava:
+        set the death message to "%victim%님이 용암에서 수영하다 사망하였습니다"
+        stop
+    
