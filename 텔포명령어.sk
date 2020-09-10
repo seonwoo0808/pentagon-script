@@ -34,22 +34,22 @@ command /other:
 command /battle:
     trigger:
         execute console command "world"
-        execute console command "tp %player% 72 112 243"
+        execute console command "minecraft:tp %player% 72 112 243"
 
 command /icespawn:
     trigger:
         execute console command "world"
-        execute console command "tp %player% -2757.5 67 4636"
+        execute console command "minecraft:tp %player% -2757.5 67 4636"
 
 command /junglespawn:
     trigger:
         execute console command "world"
-        execute console command "tp %player% -8566.5 63 5780.5"
+        execute console command minecraft:"tp %player% -8566.5 63 5780.5"
 
 command /forrestspawn:
     trigger:
         execute console command "world"
-        execute console command "tp %player% 5528.5 64 8536.5"
+        execute console command "minecraft:tp %player% 5528.5 64 8536.5"
 
 command /getbook:
     trigger:
@@ -83,7 +83,7 @@ command /townhall:
 command /police:
     trigger:
         execute console command "world"
-        execute console command "tp %player% 68 69 141"
+        execute console command "minecraft:tp %player% 68 69 141"
 
 command /law:
     trigger:
@@ -92,7 +92,7 @@ command /law:
 command /oplaw:
     trigger:
         execute console command "law"
-        execute console command "tp %player% 68 69 141"
+        execute console command "minecraft:tp %player% 68 69 141"
 
 command /보석금:
     trigger:
@@ -120,19 +120,19 @@ command /jumpmap [<string>]:
         
         if arg 1 is "easy":
             execute console command "mvtp %player% jumpmap"
-            execute console command "tp %player% 36 51 -171"
+            execute console command "minecraft:tp %player% 36 51 -171"
             message "점프맵으로 이동합니다" to player
         if arg 1 is "hard":
             execute console command "mvtp %player% jumpmap"
-            execute console command "tp %player% 36 51 36"
+            execute console command "minecraft:tp %player% 36 51 36"
             message "점프맵으로 이동합니다" to player
         if arg 1 is "normal":
             execute console command "mvtp %player% jumpmap"
-            execute console command "tp %player% -266 57 -170"
+            execute console command "minecraft:tp %player% -266 57 -170"
             message "점프맵으로 이동합니다" to player
         if arg 1 is "extreme":
             execute console command "mvtp %player% jumpmap"
-            execute console command "tp %player% -266 57 -170"
+            execute console command "minecraft:tp %player% -266 57 -170"
             message "점프맵으로 이동합니다" to player
         if arg 1 is "":
             execute console command "mvtp %player% jumpmap"
@@ -143,7 +143,7 @@ command /jumpmap [<string>]:
 command /nether:
     trigger:
         execute console command "world"
-        execute console command "tp %player% -79 66 61"  
+        execute console command "minecraft:tp %player% -79 66 61"  
 
 command /casino:
     trigger:
