@@ -1,7 +1,20 @@
 on death of player:
-    if attacker is player:
-        set the death message to "%attacker%님이 %victim%님을 %attacker's tool%로 살해하였습니다."
-        stop
+    if attacker is a player:
+        if attacker's tool is diamond sword:
+            set the death message to "%attacker%님이 %victim%님을 &e[다이아몬드 칼]&f로 살해하였습니다."
+            stop
+        if attacker's tool is iron sword:    
+            set the death message to "%attacker%님이 %victim%님을 &e[철 칼]&f로 살해하였습니다."
+            stop   
+        if attacker's tool is stone sword:    
+            set the death message to "%attacker%님이 %victim%님을 &e[돌 칼]&f로 살해하였습니다."
+            stop
+        if attacker's tool is wooden sword:   
+            set the death message to "%attacker%님이 %victim%님을 &e[나무 칼]&f로 살해하였습니다."
+            stop
+        else:
+            set the death message to "%attacker%님이 %victim%님을 %attacker's tool%로 살해하였습니다."
+            stop
     if attacker is a zombie:
         set the death message to "%victim%님이 좀비에게 물려 사망하였습니다."
         stop
