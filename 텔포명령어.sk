@@ -1,7 +1,7 @@
 command /trade:
     trigger:
         execute console command "world"
-        execute console command "tp %player% 87 65 101"
+        execute console command "minecraft:tp %player% 87 65 101"
 command /killme:
     trigger:
         execute console command "kill %player%"
@@ -10,12 +10,12 @@ command /killme:
 command /world:
     trigger:
         execute console command "world"
-        execute console command "tp %player% 43 65 103"
+        execute console command "minecraft:tp %player% 43 65 103"
 
 command /gojail:
     trigger:
         if sender is op:
-            execute console command "tp %player% 68 65 170"
+            execute console command "minecraft:tp %player% 68 65 170"
 
 command /menu:
     trigger:
