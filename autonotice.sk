@@ -1,0 +1,45 @@
+every 40 seconds:
+    if {공지사항} >= 7:
+        delete {공지사항}
+        stop
+
+    if {공지사항} is not set:
+        set {공지사항} to 1
+        broadcast "[§c자동공지&f]§5---&e만약, 같은 플레이어를 3번 연속으로 죽일시 감옥에 20분간 수감됩니다"
+        stop
+    
+    if {공지사항} is 1:
+        set {공지사항} to 2
+        broadcast "[§c자동공지&f]§5---&e만약, 누군가 자신의 구역에서 아이템을 훔쳤다면 경찰서에 신고를 바랍니다"
+        stop
+    
+    if {공지사항} is 2:
+        set {공지사항} to 3
+        broadcast "[§c자동공지&f]§5---&e자백할시 형량이 3분의 2로 줄어듭니다.(자동 감옥행은 제외)"
+        stop
+        
+    if {공지사항} is 3:
+        set {공지사항} to 4
+        broadcast "[§c자동공지&f]§5---&e복돌은 막혔습니다"
+        stop
+
+    if {공지사항} is 4:
+        set {공지사항} to 5
+        broadcast "[§c자동공지&f]§5---&e닉네임을 바꿔도 ip를 우회해도 소용없습니다. 저희 서버는 UUID를 이용해 밴을 합니다."
+        stop
+    
+    if {공지사항} is 5:
+        set {공지사항} to 6
+        broadcast "[§c자동공지&f]§5---&e도망칠 생각은 마세요. 짜피 서버 로그 보면 다 나옵니다(core protect 플러그인)"
+        stop
+
+    if {공지사항} is 6:
+        set {공지사항} to 7
+        broadcast "[§c자동공지&f]§5---&e디스코드 서버 링크 https://discord.gg/xTQKyR3"
+        stop    
+    if {공지사항} is 7:
+        set {공지사항} to 8
+        broadcast "[§c자동공지&f]§5---&e서버에 접속해있을 경우 디스코드에도 접속해야 합니다."
+        stop    
+
+    

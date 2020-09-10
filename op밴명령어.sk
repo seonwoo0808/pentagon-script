@@ -1,0 +1,55 @@
+on command "/stop":
+    if sender is not "maeja":
+        if sender is not console:
+            cancel event
+            message "이 명령어는 어드민만 사용 할 수 있다"
+
+on command "/deop":
+    if sender is not "maeja":
+        if sender is not console:
+            cancel event
+            message "이 명령어는 어드민만 사용 할 수 있다"
+
+on command "/op":
+    if sender is not "maeja":
+        if sender is not console:
+            cancel event
+            message "이 명령어는 어드민만 사용 할 수 있다"
+
+on command "/kick":
+    if sender is not "maeja":
+        if sender is not console:
+            cancel event
+            message "이 명령어는 어드민만 사용 할 수 있다"
+
+on command "/kill":
+    if sender is not "maeja":
+        if sender is not console:
+            cancel event
+            message "이 명령어는 어드민만 사용 할 수 있다"
+
+on command "//set minecraft:tnt":
+    if sender is not "maeja":
+        if sender is not console:
+            cancel event
+            message "이 명령어는 어드민만 사용 할 수 있다"
+
+
+on command "/setjail":
+    if sender is not "maeja":
+        if sender is not console:
+            cancel event
+            message "이 명령어는 어드민만 사용 할 수 있다"
+
+on command "/jail":
+    if sender is not "maeja":
+        if sender is not console:
+            cancel event
+            message "이 명령어는 어드민만 사용 할 수 있다"
+
+on command "/unjail":
+    if sender is not "maeja":
+        if sender is not console:
+            cancel event
+            message "이 명령어는 어드민만 사용 할 수 있다"
+

@@ -1,0 +1,11 @@
+on death of a zombie:
+    clear drops
+    drop 1 porkchop at victim
+    message "&e좀비고기 대신 돼지고기" to attacker
+
+
+        
+        
+
+on spawn of a enderman:
+    cancel event

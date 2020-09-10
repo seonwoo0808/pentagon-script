@@ -1,0 +1,8 @@
+on first join:
+    broadcast "&e새로운 신입 &b유저 &e[&d%player%&e]가 등장했다!"
+
+on join:
+    broadcast "&e서버에 [&d%player%&e]님이 접속하였습니다."
+
+on quit:
+    set quit message to "&e서버에 [&d%player%&e]님이 퇴장하였습니다"

@@ -1,0 +1,29 @@
+on death of player:
+    if attacker is player:
+        if {연속킬::%attacker%::*} is not set:
+            set {연속킬::%attacker%::%victim%} to 1
+            message "{연속킬::%attacker%::%victim%}"
+            
+        else:
+            
+            if {연속킬::%attacker%::%victim%} is set:
+                if {연속킬::%attacker%::%victim%} = 2:
+                    execute console command "jail %attacker% 8 20min"
+                    broadcast "[&d%attacker%&f]&e님이 &f[&d%victim%&f]&e을 3번 연속으로 죽여 &d20&e분동안 감옥에 갇힙니다."
+                else:
+                    add 1 to {연속킬::%attacker%::%victim%}
+                    message "{연속킬::%attacker%::%victim%}"
+                    
+                
+            else:
+                delete {연속킬::%attacker%::*}
+                set {연속킬::%attacker%::%victim%} to 1 
+            
+
+command /clearkill:
+    trigger:
+        if sender is console or "maeja":
+            delete {연속킬::%player%::*}
+            message "성공" to player
+        else:
+            message "당신은 오퍼레이터가 아니므로 이 명령어를 사용할수 없습니다."

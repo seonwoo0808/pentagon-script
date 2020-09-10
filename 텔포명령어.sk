@@ -1,0 +1,173 @@
+command /trade:
+    trigger:
+        execute console command "tp %player% 87 65 101"
+command /killme:
+    trigger:
+        execute console command "kill %player%"
+
+
+command /world:
+    trigger:
+        execute console command "tp %player% 43 65 103"
+
+command /gojail:
+    trigger:
+        if sender is op:
+            execute console command "tp %player% 68 65 170"
+
+command /menu:
+    trigger:
+        if player is in the region "battlegroud":
+            message "전투중이므로 메뉴를 사용할수 없습니다" to player        
+        else:
+            execute player command "openmenu"
+
+command /other:
+    trigger:
+        if player is in the region "battlegroud":
+            message "전투중이므로 메뉴를 사용할수 없습니다" to player        
+        else:
+            execute player command "openarcade"
+
+command /battle:
+    trigger:
+        execute console command "tp %player% 72 112 243"
+
+command /icespawn:
+    trigger:
+        execute console command "tp %player% -2757.5 67 4636"
+
+command /junglespawn:
+    trigger:
+        execute console command "tp %player% -8566.5 63 5780.5"
+
+command /forrestspawn:
+    trigger:
+        execute console command "tp %player% 5528.5 64 8536.5"
+
+command /getbook:
+    trigger:
+        if {쿨타임::%player%::책::초} is not set:
+            execute console command "give %player% writable_book 1"
+            message "책을 얻었다!"
+            set {쿨타임::%player%::책::초} to 300
+            loop 300 times:
+                wait 20 tick
+                subtract 1 from {쿨타임::%player%::책::초}
+            if  {쿨타임::%player%::책::초} > 1:
+                delete {쿨타임::%player%::책::*}
+                message "책 쿨타임이 끝났습니다"
+        else:
+            message "아직 /getbook 명령어를 사용할 수 없습니다! (남은시간  %{쿨타임::%player%::책::초}%초)" to player
+
+command /getcooltime: 
+    trigger:
+        if sender is op:
+            set {쿨타임::%player%::*} to 3
+            wait 10 ticks
+            message "쿨타임 삭제"
+        else:
+            message "&4당신은 오퍼레이터가 아니므로 이 명령어를 사용할 수 없다!"
+        
+
+command /townhall:
+    trigger:
+        execute console command "mvtp %player% townhall2"
+
+command /police:
+    trigger:
+        execute console command "tp %player% 68 69 141"
+
+command /law:
+    trigger:
+        execute console command "mvtp %player% law"
+        
+command /oplaw:
+    trigger:
+        execute console command "law"
+        execute console command "tp %player% 68 69 141"
+
+command /보석금:
+    trigger:
+        
+        if player is in the region "jail":
+            if {쿨타임::%player%::보석금::초} is not set:
+                execute console command "spicord send chat 보석금요청--------[%player%]님이 보석금을 요청했습니다"
+                message "보석금을 요청했습니다" to player
+                set {쿨타임::%player%::보석금::초} to 300
+                loop 300 times:
+                    wait 20 tick
+                    if  {쿨타임::%player%::보석금::초} > 0:
+                        subtract 1 from {쿨타임::%player%::보석금::초}
+                if  {쿨타임::%player%::보석금::초} < 1:
+                    delete {쿨타임::%player%::보석금::*}
+                    message "보석금 쿨타임이 끝났습니다"
+            else:
+                message "아직 보석금을 요청할 수 없습니다! (남은시간  %{쿨타임::%player%::보석금::초}%초)" to player
+
+        else:
+            message "&4감옥에 있지 않으므로 보석금을 요청할수 없습니다!" to player
+
+command /jumpmap [<string>]:
+    trigger:
+        
+        if arg 1 is "easy":
+            execute console command "mvtp %player% jumpmap"
+            execute console command "tp %player% 36 51 -171"
+            message "점프맵으로 이동합니다" to player
+        if arg 1 is "hard":
+            execute console command "mvtp %player% jumpmap"
+            execute console command "tp %player% 36 51 36"
+            message "점프맵으로 이동합니다" to player
+        if arg 1 is "normal":
+            execute console command "mvtp %player% jumpmap"
+            execute console command "tp %player% -266 57 -170"
+            message "점프맵으로 이동합니다" to player
+        if arg 1 is "extreme":
+            execute console command "mvtp %player% jumpmap"
+            execute console command "tp %player% -266 57 -170"
+            message "점프맵으로 이동합니다" to player
+        if arg 1 is "":
+            execute console command "mvtp %player% jumpmap"
+            message "점프맵으로 이동합니다" to player
+        if arg 1 is not "easy" or "hard" or "normal" or "extreme" or "":
+            message "&4명령어 사용법이 잘못됨" to player
+
+command /nether:
+    trigger:
+        execute console command "tp %player% -79 66 61"  
+
+command /casino:
+    trigger:
+        execute console command "mvtp %player% casino"     
+
+command /도움말:
+    trigger:
+        message "&e디스코드 공지사항 채널을 참고해 주세요" to player
+
+command /apt:
+    trigger:
+        execute console command "mvtp %player% home"   
+
+
+
+command /pentagon:
+    trigger:
+        execute console command "mvtp %player% pentagon"
+        
+        
+        if {쿨타임::%player%::지도::초} is not set:
+            execute op command "minimap"
+            message "지도를 받았습니다" to player
+            set {쿨타임::%player%::지도::초} to 300
+            loop 300 times:
+                wait 20 tick
+                if  {쿨타임::%player%::지도::초} > 0:
+                    subtract 1 from {쿨타임::%player%::지도::초}
+            if  {쿨타임::%player%::지도::초} < 1:
+                delete {쿨타임::%player%::지도::*}
+                message "지도 쿨타임이 끝났습니다"
+        else:
+            message "아직 지도를 요청할 수 없습니다! (남은시간  %{쿨타임::%player%::지도::초}%초)" to player
+
+        

@@ -1,0 +1,29 @@
+command /autokill:
+    trigger:
+        if sender is op:
+            execute console command "minecraft:kill @e"
+            execute console command "minecraft:kill @e[type=minecraft:slime]"
+            execute console command "minecraft:kill @e[type=minecraft:magma_cube]"
+            execute console command "minecraft:kill @e[type=minecraft:item]"
+            wait 22 ticks
+            execute console command "minecraft:kill @e[type=minecraft:slime]"
+            execute console command "minecraft:kill @e[type=minecraft:magma_cube]"
+            execute console command "minecraft:kill @e[type=minecraft:item]"
+            wait 22 ticks
+            execute console command "minecraft:kill @e[type=minecraft:slime]"
+            execute console command "minecraft:kill @e[type=minecraft:magma_cube]"
+            execute console command "minecraft:kill @e[type=minecraft:item]"
+            wait 22 ticks
+            execute console command "minecraft:kill @e[type=minecraft:slime]"
+            execute console command "minecraft:kill @e[type=minecraft:magma_cube]"
+            execute console command "minecraft:kill @e[type=minecraft:item]"
+            wait 22 ticks
+            execute console command "minecraft:kill @e[type=minecraft:slime]"
+            execute console command "minecraft:kill @e[type=minecraft:magma_cube]"
+            execute console command "minecraft:kill @e[type=minecraft:item]"
+            wait 22 ticks
+            execute console command "minecraft:kill @e[type=minecraft:item]"
+        
+        else:
+            message "&4어디서 감히 오피도 아닌자가 이 명령어를 사용하려 하는가!!!!!!!!!!" to player
+            

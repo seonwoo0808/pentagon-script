@@ -1,0 +1,8 @@
+on swap hand items:
+
+    if player is in the region "battlegroud":
+        message "전투중이므로 양손을 바꿉니다." to player        
+    else:
+
+        cancel event
+        execute player command "/menu"
