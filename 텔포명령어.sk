@@ -45,7 +45,7 @@ command /icespawn:
 command /junglespawn:
     trigger:
         execute console command "mvtp %player% world"
-        execute console command minecraft:"tp %player% -8566.5 63 5780.5"
+        execute console command "minecraft:tp %player% -8566.5 63 5780.5"
 
 command /forrestspawn:
     trigger:
