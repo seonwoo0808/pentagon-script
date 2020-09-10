@@ -10,7 +10,7 @@ command /killme:
 
 command /world:
     trigger:
-        execute console command "world"
+        execute console command "mvtp %player% world"
         execute console command "minecraft:tp %player% 43 65 103"
 
 command /gojail:
