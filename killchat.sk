@@ -23,4 +23,6 @@ on death of player:
     if damage was caused by lava:
         set the death message to "%victim%님이 용암에서 수영하다 사망하였습니다"
         stop
-    
+    if death message contains "died":
+        set the death message to "%victim%님이 명령어에 의해 사망하였습니다"
+        stop
