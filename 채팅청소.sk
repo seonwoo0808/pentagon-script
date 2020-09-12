@@ -1,0 +1,44 @@
+#-----[ Copyright ]-----
+#1. 해당 스크립트의 저작권은 재민(jaemin1508)에게 있습니다.
+#2. 해당 스크립트의 저작자는 재민(jaemin1508)입니다.
+#3. 타인에게 파일 전송 금지(제작자의 블로그 에서만 받아주세여)
+#4. 이 파일을 공유, 전송, 서버팩에 사용은 엄격히 금지됩니다.
+#-----[ Creater information ]-----
+#네이버 블로그 : https://blog.naver.com/jaemin1508
+#디스코드 : </oiso2019>#1564
+#톡디 : cwjwbgus1567
+#-----[ 결제 정보 ]-----
+#스크립트 구매자: everyone
+#스크립트 구매 일자: xxxx-xx-xx
+#스크립트 결제 방식: 무료 나눔
+#스크립트 구매 가격: 0WON
+#-----[ 규칙 ]-----
+#해당 스크립트를 제작자의 허락없이 2차수정, 2차배포시 강력대응합니다.
+#해당 스크립트를 타인에게 전송 및 빌려주는 것도 일절 금지됩니다.
+#-----[ 환불 ]-----
+#Skript는 파일 형식이기 때문에 환불은 불가능합니다.
+#다른 Skript로 변경도 불가능합니다.
+#해당 파일을 다른 위치 또는 클라우드, 등에 복사했을 가능성도 있기 때문입니다.
+#-----[ 위의 사항 ]-----
+#위의 내용을 수정시 강력하게 제재합니다.
+#Copyright © 재민 All Rights Reserved
+
+options:
+	!: &e&l[!]
+
+command /채팅청소 [<text>]:
+	permission: clear.chat
+	permission message: &6&l[!] &c당신은 채팅을 청소하실 수 있는 권한이 없습니다!
+	trigger:
+		loop 99 times:
+			broadcast "&f"
+		if command sender is a player:
+			loop all players:
+				if player is not loop-player:
+					send "{@!} &e&l%player%&6님이 채팅을 청소하셨습니다!" to loop-player
+				else:
+					send "{@!} &6성공적으로 채팅을 청소하셨습니다!" to loop-player
+				send "{@!} &e&l%player% &6님이 채팅을 청소하셨습니다!" to console
+		else:
+			send "{@!} &e&l콘솔&6에서 채팅을 청소하셨습니다!" to all players
+			send "{@!} &6성공적으로 채팅을 청소하셨습니다!"
