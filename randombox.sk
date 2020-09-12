@@ -1,0 +1,9 @@
+command /randombox:
+    trigger:
+        give 1 chest "&e랜덤상자" with lore "바닥에 설치하세요" to player 
+
+on place of chest:
+    if name of player's tool is "&e랜덤상자"
+    cancel event
+    remove 1 of player's tool from player's tool
+    set {랜덤뽑기.%player%} to random interger between 1 and 10
