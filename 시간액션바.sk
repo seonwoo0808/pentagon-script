@@ -1,4 +1,4 @@
 every 1 tick:
     loop all players:
-        set {_now} to now formatted human-readable as "dd일 hh시 mm분 ss초"
+        set {_now} to now formatted human-readable as "hh시 mm분 ss초"
         send action bar "%{_now}%" to loop-player
