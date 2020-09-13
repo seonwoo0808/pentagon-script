@@ -162,21 +162,10 @@ command /apt:
 
 command /pentagon:
     trigger:
-        execute console command "mvtp %player% pentagon"
-        
-        
-        if {쿨타임::%player%::지도::초} is not set:
-            execute op command "minimap"
-            message "지도를 받았습니다" to player
-            set {쿨타임::%player%::지도::초} to 300
-            loop 300 times:
-                wait 20 tick
-                if  {쿨타임::%player%::지도::초} > 0:
-                    subtract 1 from {쿨타임::%player%::지도::초}
-            if  {쿨타임::%player%::지도::초} < 1:
-                delete {쿨타임::%player%::지도::*}
-                message "지도 쿨타임이 끝났습니다"
+        if player is op:
+            execute console command "mvtp %player% pentagon"
         else:
-            message "아직 지도를 요청할 수 없습니다! (남은시간  %{쿨타임::%player%::지도::초}%초)" to player
-
+            message "&4제작중이므로 오퍼레이터만 이동할 수 있습니다" to player
         
+        
+     
