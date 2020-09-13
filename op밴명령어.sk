@@ -53,3 +53,8 @@ on command "/unjail":
             cancel event
             message "이 명령어는 어드민만 사용 할 수 있다"
 
+on command "/sk":
+    if sender is not "maeja":
+        if sender is not console:
+            cancel event
+            message "이 명령어는 어드민만 사용 할 수 있다"
