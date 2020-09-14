@@ -6,16 +6,17 @@ every 1 tick:
 
 command /autooff:
     trigger:
-        if {autooff} is set:
-            if {autooff} is "1":
-                set {autooff} to 0
-                message "&e자동종료 비활성화"
+        if sender is op:
+            if {autooff} is set:
+                if {autooff} is "1":
+                    set {autooff} to 0
+                    message "&e자동종료 비활성화"
+                else:
+                    set {autooff} to 1
+                    message "&e자동종료 활성화"
+
             else:
                 set {autooff} to 1
                 message "&e자동종료 활성화"
-
-        else:
-            set {autooff} to 1
-            message "&e자동종료 활성화"
 
             
