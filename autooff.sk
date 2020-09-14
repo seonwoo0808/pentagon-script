@@ -1,6 +1,14 @@
 every 1 tick:
     if {autooff} is "1":
         set {_hour} to now formatted human-readable as "hhmm"
+        if {_hour} is "2140":
+            broadcast "서버가 20분 뒤에 종료됩니다"
+        if {_hour} is "2150":
+            broadcast "서버가 10분 뒤에 종료됩니다"
+        if {_hour} is "2155":
+            broadcast "서버가 5분 뒤에 종료됩니다"
+        if {_hour} is "2159":
+            broadcast "서버가 1분 뒤에 종료됩니다"
         if {_hour} is "2200":
             execute console command "stop"
 
