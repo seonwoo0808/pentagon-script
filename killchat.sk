@@ -24,6 +24,13 @@ on death of player:
     if attacker is a spider:
         set the death message to "%victim%님이 거미에게 물려 사망하였습니다."
         stop
+    if attacker is a skeleton:
+        set the death message to "%victim%님이 스켈레톤의 화살을 맞아 사망하였습니다."
+        stop
+    if attacker is a ender dragon:
+        set the death message to "%victim%님이 엔더드래곤에 도전하다 사망하였습니다."
+        stop
+
     if damage was caused by fall:
         set the death message to "%victim%님이 낙사했습니다"
         stop
