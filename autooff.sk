@@ -1,0 +1,20 @@
+every 1 tick:
+    if {autooff} is "1":
+        set {_hour} to now formatted human-readable as "hhmm"
+        if {_hour} is "2200":
+            execute console command "stop"
+
+command /autooff:
+    if {autooff} is set
+        if {autooff} is "1":
+            set {autooff} to o
+            message "&e자동종료 비활성화"
+        else:
+            set {autooff} to 1
+            message "&e자동종료 활성화"
+
+    else:
+        set {autooff} to 1
+        message "&e자동종료 활성화"
+
+            
