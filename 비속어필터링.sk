@@ -1,0 +1,4 @@
+on chat:
+    if chat message contains "시발" or "씨발" or "존나" or "좇" or "병신" or "지랄":
+        cancel event 
+        message "욕설이 감지되어 채팅을 취소합니다"
