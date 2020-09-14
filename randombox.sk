@@ -7,7 +7,7 @@ on place of chest:
     if name of player's tool is "&e랜덤상자":
         cancel event
         remove 1 of player's tool from player's tool
-        set {랜덤뽑기.%player%} to random integer between 1 and 10
+        set {랜덤뽑기.%player%} to random integer between 1 and 25
         
         if {랜덤뽑기.%player%} is 1:
             give 1 diamond to player
@@ -37,5 +37,65 @@ on place of chest:
             give 1 gold ingot to player
             message "&6금 &f1개" to player
         if {랜덤뽑기.%player%} is 10:
+            give 1 coal to player
+            message "&e석탄 &f1개" to player
+        if {랜덤뽑기.%player%} is 11:
+            give 1 gold ingot to player
+            message "&6금 &f1개" to player
+        if {랜덤뽑기.%player%} is 12:
+            give 1 iron ingot to player
+            message "&e철 &f1개" to player
+        if {랜덤뽑기.%player%} is 13:
+            give 1 iron ingot to player
+            message "&e철 &f1개" to player
+        if {랜덤뽑기.%player%} is 14:
+            give 1 iron ingot to player
+            message "&e철 &f1개" to player
+        if {랜덤뽑기.%player%} is 15:
+            give 1 iron ingot to player
+            message "&e철 &f1개" to player
+        if {랜덤뽑기.%player%} is 16:
+            give 1 coal to player
+            message "&e석탄 &f1개" to player
+        if {랜덤뽑기.%player%} is 17:
+            give 1 coal to player
+            message "&e석탄 &f1개" to player
+        if {랜덤뽑기.%player%} is 18:
+            give 1 coal to player
+            message "&e석탄 &f1개" to player
+        if {랜덤뽑기.%player%} is 19:
+            give 1 gold ingot to player
+            message "&6금 &f1개" to player
+        if {랜덤뽑기.%player%} is 20:
+            give 1 emerald to player
+            message "&a에메랄드 &f1개" to player
+        if {랜덤뽑기.%player%} is 21:
+            give 1 gold ingot to player
+            message "&6금 &f1개" to player
+        if {랜덤뽑기.%player%} is 22:
+            give 1 iron ingot to player
+            message "&e철 &f1개" to player
+        if {랜덤뽑기.%player%} is 23:
+            give 1 iron ingot to player
+            message "&e철 &f1개" to player
+        if {랜덤뽑기.%player%} is 24:
+            give 1 iron ingot to player
+            message "&e철 &f1개" to player
+        if {랜덤뽑기.%player%} is 25:
+            give 1 coal to player
+            message "&e석탄 &f1개" to player
+        if {랜덤뽑기.%player%} is 26:
+            give 1 coal to player
+            message "&e석탄 &f1개" to player
+        if {랜덤뽑기.%player%} is 27:
+            give 1 coal to player
+            message "&e석탄 &f1개" to player
+        if {랜덤뽑기.%player%} is 28:
+            give 1 coal to player
+            message "&e석탄 &f1개" to player
+        if {랜덤뽑기.%player%} is 29:
+            give 1 gold ingot to player
+            message "&6금 &f1개" to player
+        if {랜덤뽑기.%player%} is 30:
             give 1 emerald to player
             message "&a에메랄드 &f1개" to player
