@@ -27,6 +27,9 @@ on death of player:
     if attacker is a skeleton:
         set the death message to "%victim%님이 스켈레톤의 화살을 맞아 사망하였습니다."
         stop
+    if attacker is a phantom:
+        set the death message to "%victim%님이 팬텀의 날갯짓에 당해 사망하였습니다."
+        stop
     if attacker is a ender dragon:
         set the death message to "%victim%님이 엔더드래곤에 도전하다 사망하였습니다."
         stop
@@ -44,5 +47,8 @@ on death of player:
         set the death message to "%victim%님이 용암에서 수영하다 사망하였습니다"
         stop
     if death message contains "died":
-        set the death message to "%victim%님이 명령어에 의해 사망하였습니다"
+        set the death message to "%victim%님이 마법에 의해 사망하였습니다"
+        stop
+    if damage was caused by magic:
+        set the death message to "%victim%님이 용암에서 수영하다 사망하였습니다"
         stop
