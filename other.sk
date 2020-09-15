@@ -1,0 +1,6 @@
+command /other:
+    trigger:
+        if player is in the region "battlegroud":
+            message "전투중이므로 메뉴를 사용할수 없습니다" to player        
+        else:
+            execute player command "openarcade"
