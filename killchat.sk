@@ -49,6 +49,3 @@ on death of player:
     if death message contains "died":
         set the death message to "%victim%님이 마법에 의해 사망하였습니다"
         stop
-    if damage was caused by magic:
-        set the death message to "%victim%님이 용암에서 수영하다 사망하였습니다"
-        stop
