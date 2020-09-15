@@ -1,0 +1,38 @@
+﻿options:
+	접두사: &6&l[SKSV]
+command /귓 [<player>] [<text>]:
+	trigger:
+		if arg 2 is not set:
+			send "{@접두사} &f/귓 [닉네임] [할말]" to player
+			stop
+		if arg 2 is set:
+			if arg 1 is player:
+				send "{@접두사} &c자신에게는 귓속말을 보낼 수 없습니다." to player
+				stop
+			if arg 1 is online:
+				send "&6&l[&f&l별온라인&6&l] &6&l[ &f&l보냄 &6&l] &e&l[ &f&l%arg 1% &e&l] &b&l[ &f&l%argument 2% &b&l]" to player
+				send "&6&l[&f&l별온라인&6&l] &6&l[ &f&l받음 &6&l] &e&l[ &f&l%player% &e&l] &b&l[ &f&l%argument 2% &b&l]" to arg 1
+				loop all players:
+					if {스파이.%loop-player%} is "활성화":
+						send "&6&l[&f&l별온라인&6&l] &e&l[ &f&l%player% &e&l] &f&l☞ &e&l[ &f&l%arg 1% &e&l] &b&l[ &f&l%argument 2% &b&l]" to loop-player
+				stop
+			send "{@접두사} &f해당 유저는 접속 중이지 않습니다." to player
+command /spy:
+	permission: op.op
+	permission Message: {@접두사} &c당신은 권한이 없습니다.
+	trigger:
+		if {스파이.%player%} is not set:
+			set {스파이.%player%} to "활성화"
+			send "{@접두사} &f이제부터 모든 유저의 귓속말이 보입니다."
+			stop
+		if {스파이.%player%} is "비활성화":
+			set {스파이.%player%} to "활성화"
+			send "{@접두사} &f이제부터 모든 유저의 귓속말이 보입니다."
+			stop
+		if {스파이.%player%} is "활성화":
+			set {스파이.%player%} to "비활성화"
+			send "{@접두사} &f더는 모든 유저의 귓속말이 보이지 않습니다."
+			stop
+on quit:
+	if {스파이.%player%} is "활성화":
+		delete {스파이.%player%}
