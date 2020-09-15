@@ -1,0 +1,13 @@
+command /getpentagon:
+    trigger:
+        if player is op:
+            give 1 end rod named "&ePENTAGON 길드원의 증표" with lore "바닥에 설치하세요" to player
+            
+            give 1 map named "&ePENTAGON 길드원의 이력서" with lore "교환하세요" to player
+
+on place of end rod:
+    if name of player's tool is "&ePENTAGON 길드원의 증표":
+        cancel event
+         
+        execute console command "mvtp %player% pentagonguild"
+        
