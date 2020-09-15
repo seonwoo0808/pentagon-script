@@ -1,22 +1,22 @@
 on death of player:
    
-    if attacker is player:
-        if {연속킬::%attacker%::%victim's name%} is set:
+    
+    if {연속킬::%attacker%::%victim's name%} is set:
             
-            add 1 to {연속킬::%attacker%::%victim's name%}
+        add 1 to {연속킬::%attacker%::%victim's name%}
 
             
-        else:
-            delete {연속킬::%attacker's name%::*}
-            set {연속킬::%attacker's name%::%victim's name%} to 1
+    else:
+        delete {연속킬::%attacker's name%::*}
+        set {연속킬::%attacker's name%::%victim's name%} to 1
             
                 
             
             
-        if {연속킬::%attacker's name%::%victim%} is 3:
-            subtract 1 from {연속킬::%attacker's name%::%victim%}
-            execute console command "jail %attacker% 8 20min"
-            broadcast "[&d%attacker%&f]&e님이 &f[&d%victim%&f]&e을 3번 연속으로 죽여 &d20&e분동안 감옥에 갇힙니다."
+    if {연속킬::%attacker's name%::%victim%} is 3:
+        subtract 1 from {연속킬::%attacker's name%::%victim%}
+        execute console command "jail %attacker% 8 20min"
+        broadcast "[&d%attacker%&f]&e님이 &f[&d%victim%&f]&e을 3번 연속으로 죽여 &d20&e분동안 감옥에 갇힙니다."
 
         
                     
