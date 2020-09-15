@@ -1,0 +1,7 @@
+command /후원코인:
+    trigger:
+        if sender is op:
+            give 1 book named "&e후원코인" with lore "감사합니다" to player
+        else:
+            
+            message "이 명령어는 오퍼레이터만 사용 할 수 있다"
