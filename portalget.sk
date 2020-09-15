@@ -1,0 +1,11 @@
+command /getportal:
+    trigger:
+        if player is op:
+            give 1 end portal frame named "&e엔더포탈로 가기" with lore "바닥에 설치하세요" to player
+
+on place of end portal frame:
+    if name of player's tool is "&e엔더포탈로 가기":
+        cancel event
+        remove 1 of player's tool from player's tool 
+        execute console command "mvtp %player% world"
+        execute console command "minecraft:tp %player% 47 66 117"
