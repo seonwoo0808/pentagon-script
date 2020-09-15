@@ -2,7 +2,7 @@ every 1 tick:
 
     set {_hour} to now formatted human-readable as "hhmm"
     
-    if {_hour} is "0903":
+    if {_hour} is "1000":
 
         execute console command "stop"
 
