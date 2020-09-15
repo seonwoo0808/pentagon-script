@@ -39,7 +39,7 @@ every 40 seconds:
         stop    
     if {공지사항} is 7:
         set {공지사항} to 8
-        broadcast "[§c자동공지&f]§5---&e서버에 접속해있을 경우 디스코드에도 접속해야 합니다."
+        broadcast "[§c자동공지&f]§5---&e조심하세요. 자신의 땅이 아니면 언제든지 약탈당할수 있습니다"
         stop    
 
     
