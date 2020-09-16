@@ -2,7 +2,7 @@ command /trade:
     trigger:
         execute console command "mvtp %player% world"
         wait 1 ticks
-        execute console command "minecraft:tp %player% 87 65 101"
+        execute console command "minecraft:tp %player% 166 66 122"
 command /killme:
     trigger:
         execute console command "kill %player%"
