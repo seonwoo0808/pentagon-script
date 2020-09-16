@@ -3,5 +3,5 @@ command /조합법 [<string>]:
         set {조합법} to arg 1
         message "&e디스코드 인게임 채팅창에 결과가 전송되었습니다"
         
-        execute console command "spicord send chat http://www.mcbekr.kr/bbs/search.php?sfl=wr_subject%%7C%%7Cwr_content&sop=and&stx=%{조합법}%"
-        execute console command "spicord send chat 조합법 검색 결과입니다"
+        execute console command "discord broadcast http://www.mcbekr.kr/bbs/search.php?sfl=wr_subject%%7C%%7Cwr_content&sop=and&stx=%{조합법}%"
+        execute console command "discord broadcast 조합법 검색 결과입니다"
