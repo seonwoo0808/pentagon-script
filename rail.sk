@@ -1,0 +1,11 @@
+command /getrail:
+    trigger:
+        if player is op:
+            give 1 rail named "&e철도로 가기" with lore "바닥에 설치하세요" to player
+
+on place of rail:
+    if name of player's tool is "&e철도로 가기":
+        cancel event
+        remove 1 of player's tool from player's tool 
+        execute console command "mvtp %player% world"
+        execute console command "minecraft:tp %player% 83 83 223"
