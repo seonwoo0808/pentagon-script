@@ -12,6 +12,9 @@ command /3단계 [<string>]:
             set {선택된플레이어} to arg 1
             set {조합법단계::%{선택된플레이어}%} to "3"
             execute console command "minecraft:give %{선택된플레이어}% minecraft:book{display:{Name:'{""text"":""3단계 설명""}',Lore:['{""text"":""3단계 아이템은 조합이 아니라 구매로 획득합니다""}']}}"
+            execute console command "tag %{선택된플레이어}% add a3"
+            execute console command "tag %{선택된플레이어}% add a2"
+            execute console command "tag %{선택된플레이어}% add a1"
         else:
             message "이 명령어는 오퍼레이터만 사용 할 수 있다"
 
@@ -21,6 +24,9 @@ command /2단계 [<string>]:
             set {선택된플레이어} to arg 1
             set {조합법단계::%{선택된플레이어}%} to "2"
             execute console command "minecraft:give %{선택된플레이어}% minecraft:honey_bottle{display:{Name:'{""text"":""2단계조합법 교환권""}',Lore:['{""text"":""이것도 교환하세요!""}']}}"
+            execute console command "tag %{선택된플레이어}% add a2"
+            execute console command "tag %{선택된플레이어}% add a1"
+            execute console command "tag %{선택된플레이어}% remove a3"
         else:
             message "이 명령어는 오퍼레이터만 사용 할 수 있다"
 
@@ -30,6 +36,9 @@ command /1단계 [<string>]:
             set {선택된플레이어} to arg 1
             set {조합법단계::%{선택된플레이어}%} to "1"
             execute console command "minecraft:give %{선택된플레이어}% minecraft:honey_bottle{display:{Name:'{""text"":""1단계조합법 교환권""}',Lore:['{""text"":""교환하세요!""}']}}"
+            execute console command "tag %{선택된플레이어}% add a1"
+            execute console command "tag %{선택된플레이어}% remove a3"
+            execute console command "tag %{선택된플레이어}% remove a2"
         else:
             message "이 명령어는 오퍼레이터만 사용 할 수 있다"
 
@@ -38,10 +47,18 @@ command /0단계 [<string>]:
         if sender is op:
             set {선택된플레이어} to arg 1
             set {조합법단계::%{선택된플레이어}%} to 0
-            
+            execute console command "tag %{선택된플레이어}% remove a3"
+            execute console command "tag %{선택된플레이어}% remove a2"
+            execute console command "tag %{선택된플레이어}% remove a1"
         else:
             message "이 명령어는 오퍼레이터만 사용 할 수 있다"
 
 command /levelinfo:
     trigger:
         message "당신은 %{조합법단계::%player%}%단계 인증유저입니다" to player
+		
+command /인증목록:
+	trigger:
+		message "/3단계 // 밴아이템이 모두 언락시키 수 있다"
+		message "/2단계 // 밴아이템을 tnt,엔더진주를 제외하고 만들 수 있다"
+		message "/1단계 // 밴아이템 중에서 피스톤,호퍼만 만들 수 있다"
