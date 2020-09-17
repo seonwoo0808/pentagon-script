@@ -1,0 +1,53 @@
+command /help:
+	executable by: players and console
+	aliases: /help
+	trigger:
+		message "&f=================="
+		message "&7/섬명령어, /is help : 섬 명령어를 확인합니다."
+		message "&7/is, /island : 섬으로 이동합니다."
+		message "&7/enderspawn : 야생 엔더월드로 갑니다. 이 명령어는 섬 엔더월드에서만 가능합니다."
+		message "&7/떠돌이상인 : 떠돌이 상인을 소환합니다. (30분 쿨타임)"
+		message "&7/팀명령어 : 팀 명령어를 확인합니다."
+command /명령어:
+	executable by: players and console
+	aliases: /명령어
+	trigger:
+		message "&f=================="
+		message "&7/섬명령어, /is help : 섬 명령어를 확인합니다."
+		message "&7/is, /island : 섬으로 이동합니다."
+		message "&7/enderspawn : 야생 엔더월드로 갑니다. 이 명령어는 섬 엔더월드에서만 가능합니다."
+		message "&7/떠돌이상인 : 떠돌이 상인을 소환합니다. (30분 쿨타임)"
+		message "&7/팀명령어 : 팀 명령어를 확인합니다."
+
+command /섬명령어:
+	executable by: players and console
+	aliases: /섬명령어
+	trigger:
+		message "&f=================="
+		message "&7/island info : 자신의 섬의 정보를 봅니다."
+		message "&7/island biomes : 바이옴을 변경합니다."
+		message "&7/island sethome : 섬에서 셋홈 합니다."
+		message "&7/island home, /island h : 집으로 갑니다."
+		message "&7/island settings : 자신의 섬을 설정합니다. 섬 소유자만 가능합니다."
+		message "&7/island level : 자신의 섬 레벨을 확인합니다. (10분 쿨타임)"
+		message "&7/island top : 1위부터 9위까지 플레이어 섬 순위를 확인합니다."
+		message "&7/island ban <닉네임> : 차단 목록에 추가합니다."
+		message "&7/island banlist : 차단 목록을 봅니다."
+		message "&7/island unban <닉네임> : 차단한 플레이어를 차단 해제합니다."
+		message "&7/island reset : 자신의 섬을 초기화합니다."
+		message "&c주의&7: 인벤토리와 엔더상자도 증발되므로 신중하게 선택 하시길 바랍니다."
+command /팀명령어:
+	executable by: players and console
+	aliases: /팀명령어
+	trigger:
+		message "&f=================="
+		message "&7/island team demote <닉네임> : 해당 플레이어를 강등합니다."
+		message "&7/island team invite <닉네임> : 자신의 섬을 플레이어에게 초대합니다."
+		message "&7/island team kick <닉네임> : 자신의 섬을 플레이어에게 강퇴합니다."
+		message "&7/island team leave : 섬을 떠납니다."
+		message "&7/island team reject : 초대에 거절합니다."
+		message "&7/island team accept : 초대에 승락합니다."
+		message "&c주의&7: 초대받은 플레이어 섬은 증발되므로 신중하게 선택 하시길 바랍니다."
+		message "&7/island team setowner <닉네임>: 섬의 소유자를 변경합니다."
+		message "&7/island team trust <닉네임> : give a player trusted rank on your island"
+		message "&7/island team untrust <닉네임> : remove trusted player rank from player"

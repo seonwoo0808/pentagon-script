@@ -1,0 +1,192 @@
+MC-2591 – 용암 모서리를 걷는 것은 피해를 입음.
+MC-3328 – Dismounting an entity places riding entity / player half block too high.
+MC-7424 – 낙사피해 사망 메시지는 블록 플레이어가 올바르게 떨어지는 것을 보여주지 않음.(사다리, 덩굴, 물)
+MC-10727 – 플레이어와 엔티티 그림자는 레드스톤과 z-fighting을 합니다.
+MC-17431 – 데이터 태그가 있는 1셋 아이템을 마법 부여대 GUI로 Shift 클릭하면 이동 된 아이템에서 데이터 태그가 제거됨
+MC-45619
+MC-52178 – 웅크리기를 하는 동안 망토가 아래로 이동하지 않음 / 웅크리기를 하는 동안 망토가 몸에서 분리됨
+MC-59363 – 두 마우스 버튼을 동시에 사용하면 아이템 액자의 아이템이 삭제됨.
+MC-64242 – Silent 태그 일부 개체에서 작동하지 않음.
+MC-64334 – Fire can be destroyed if given an item with CanDestroy tag for unbreakable block below (notably bedrock).
+MC-64871 – Cannot sleep while on fire, even with Fire Resistance.
+MC-65951 – 갑옷 거치대는 울타리를 통해 떨어짐.
+MC-75328 – 인벤토리 제작대에서 /clear 해도 아이템을 지우지 않음.
+MC-76810 – 뼛가루 입자가 높은 좌표에서 깨짐 (부동소수점 정밀도)
+MC-79944 – Various statistics overflow at 32-bit integer limit.
+MC-81659 – 화염구와 위더스켈 히트박스는 몇 초 동안 자주 보이지 않음.
+MC-82235 – 번개에 맞은 아기 돼지가 성인 좀비 피그맨으로 변신함
+MC-85527 – Shulkers opening into blocks.
+MC-89043 – Slime blocks moved by pistons often fail to bounce up the player.
+MC-91522 – Shulker rendering position desync and generates ghost shulker when destroying shulker-ridden boat or minecart.
+MC-92889 – 플레이어가 이미 수리가 완료된 아이템을 착용한 경우 수선으로 경험치 소비를 제대로 하지 않음.
+MC-93198 – 물약 던지기 / 던질 수 있는 투사체가 양손이 위아래로 튀어 나옴
+MC-93477 – Shulkers opening into shulker.
+MC-93631 – 피스톤 수축시 뒤쪽으로 연결된 블록이 튀어 나옴
+MC-93813 – Snow golems throwing snowballs play arrow shooting sound.
+MC-94094 – 스노우 골렘 가위로 자를 때 호박을 주지 않음.
+MC-94730 – Endermen become passive when teleporting randomly during day while being aggressive.
+MC-96436 – 계란, 눈덩이, 경험치 병을 말을 타면서 던지면 즉시 부서짐.
+MC-97958 – 작은 슬라임이 점프하거나 찌그러지는 소리가 없음.
+MC-100342 – Several Non-Ticking blocks are marked as ticking forcing the growth-algorithm to check chunks needlessly.
+MC-101084 – Held items/blocks appear to bob down and up when opening horse's inventory
+MC-101364 – Mobs and players sometimes dismount vehicles in a dangerous place.
+MC-102319 – Nether portal trigger and travel sounds are not assigned to any sound category.
+MC-103655 – 고양이가 상자나 침대에 앉아있는 동안 마우스를 우클릭해 일으킬 수 없음
+MC-104900 – 스켈레톤, 환술사, 석궁을 가진 피글린이 특정 블록을 밟거나 걸을 때 매우 빠르게 움직임.
+MC-104949 – Mobs can't jump shorter than half of the blocks.
+MC-109370 – 기둥 블록의 밑면이 180도 회전
+MC-109844 – en_us.json에서 사용되지 않은 문자열 포함
+MC-109850 – 레드스톤의 바닥 텍스처가 없음
+MC-111133 – 열린 셜커를 피스톤으로 밀면 셜커 글리치 생김
+MC-111473 – 플레이어 폭죽은 플레이어 킬로 간주되지 않음.
+MC-111475 – 크리에이티브 플레이어가 폭죽이 무적 몹을 해치지 못함
+MC-111498 – 폭죽과 물병이 피해 되어도 중립 몹이 화나거나 적대적이지 않음.
+MC-111502 – Fireworks damage does not make passive mobs flee in panic.
+MC-112630 – 당근 낚싯대를 부실 수 없음.
+MC-113381 – 모루와 콘크리트 모래 블록의 떨어지는 먼지 입자는 검은 색임.
+MC-113809 – 후렴화, 대나무, 사탕수수, 선인장 및 기타식물은 블록 유형으로 교체 될 때 즉시 자람. (제로틱 패치)
+MC-114000 – 고양이 hiss 소리에서 마우스 클릭
+MC-114304 – Retracting piston pushes entities standing behind the back of it.
+MC-120335 – 모델 파일에 "uv"값이 잘못되어 화분 바닥 텍스처가 렌더링되지 않음.
+MC-122128 – 제작법 책이 사망 후 닫힌 상태로 재설정됨.
+MC-122187 – Teleported to coordinates wrong when teleporting entities relatively.
+MC-122335 – Projectiles go through an entity if it is close to a player or a snow golem.
+MC-122715 – /teleport command no longer prevents teleporting to invalid coordinates.
+MC-128247 – Dolphins can jump way too far causing them to hit on land.
+MC-129137 – 평화로움 적대적 몹을 모방 한 앵무새는 그렇게 평화롭지 않음
+MC-130137 – Grass and mycelium do not decay underwater.
+MC-130906 – 보트 근처에 돌고래가 매우 빠르게 이동함.
+MC-131046 – 화난 돌고래가 돌고래의 우아함을 줌.
+MC-131440
+MC-131770 – 빗방울 입자가 물이나 용암 표면 아래 한 블록 아래에 나타남
+MC-132607 – 슬라임 및 마그마 큐브가 분열해도 NoAI값을 복사하지 않음
+MC-132967 – 버섯이 지도에서 초록 점으로 보임.
+MC-133088 – Missing translation string death.attack.magic.player.
+MC-134162 – 아이템이 거북이 알을 깰 수 있음
+MC-134481 – 오타 en_us.json: "Status requst has been handled".
+MC-134900 –server.properties generator-settings for level-type FLAT not implemented; property is stored in ignored flat_world_options NBT.
+MC-135034 – Burning mobs are extinguished by snow in cold biomes, but not in snowy biomes.
+MC-135151 – 오타 en_us.json: "An error occured!".
+MC-135849 - Grass and mycelium do not decay under waterlogged blocks.
+MC-136868 – 발화된 TNT, 화살 또는 삼지창이 영혼 모래가 눈 층에 떨어지면 검은 색으로 변함.
+MC-137554 – 깎는 소리는 '친화적 생명체' 소리 범주에 있음
+MC-138402 – Waterlogged walls "connect" to water source blocks above.
+MC-138600 – 고양이가 이미 침대에 앉기로 한 경우 선물을 가져오지 않음.
+MC-140544 – 곡괭이로 피스톤을 부셔도 피스톤 파괴 속도가 변하지 않음
+MC-140545 – 길찾기는 북쪽 (-Z) 방향을 선호함.
+MC-145140 – 소환시 화염구와 상호작용할 수 없음
+MC-146824 – Inconsistency: Ladders and tripwire hooks cannot be placed on the sides of redstone blocks, observers and target blocks.
+MC-146928 – 영혼 모래에 문, 레일, 버튼, 압력판, 레드스톤 등을 놓을 수 없음
+MC-147368 - 약탈자 전초기지는 물 속에서 생성 될 수 있음.
+MC-147496 – 돌고래가 플레이어가 타지 않은 보트를 타려 함.
+MC-147601 – 퍼퍼 기둥 블록 상단 텍스처가 새로운 텍스처로 변경되지 않음.
+MC-147708 – Putting out fires is not considered mining a block, leading to strange effects.
+MC-148067 – Snow golems are damaged by snowfall in mountain and cold biomes.
+MC-148360 - 어디에 있든 동굴 분위기 소리가 재생됨.
+MC-148474
+MC-148869 – 플레이어는 광산 수레나 보트에서 나올 때 땅을 뚫을 수 있음.
+MC-148935 – NoAI 좀비는 여전히 드라운드로 전환됨.
+MC-148936 – 음수 Age으로 소환 된 앵무새의 히트박스가 작음.
+MC-149052
+MC-149081 – Entering a bed from a mount causes the player to bounce up and down.
+MC-149375 – 스노우 레이어 내부에 카메라 배치 가능
+MC-149776 – 지도 제작대에 레시피를 표시하려면 문자열이 필요함.
+MC-150020
+MC-152441 – Corner quartz stairs (not corner smooth quartz stairs) do not have the border on the back/bottom that a normal quartz stair would have.
+MC-152441 – Corner quartz stairs do not have the border on the back/bottom that a normal quartz stair would have.
+MC-154867
+MC-155977 – Enchanting a book makes the book lose its name.
+MC-158807 – 재고에서 수리하여 저주 마법이 걸린 아이템을 제거 할 수 있음
+MC-159300 – 좀비에 감염된 주민이 거래를 한 경우에도 디스폰 할 수 있음.
+MC-159773
+MC-159918 – 여우는 북극곰한테서 도망가지 않음.
+MC-159963 – 광산 수레가 거북이 알을 깰 수 있음
+MC-160053 – Enderman keeps following the player after becoming neutral/passive.
+MC-160897
+MC-160902 – 전체 광산 수레를 마우스 오른쪽 버튼으로 클릭하면 팔이 흔들림
+MC-160959 – 낮에 침대를 클릭해도 "달콤한 꿈"이 나오지 않음.
+MC-161156 – 좀벌레와 엔더 마이트가 영혼 모래 위에 있을 때 검은색으로 나타남
+MC-161259 – 돼지를 타고 당근 낚싯대을 사용하면 손 애니메이션이 재생되지 않음
+MC-162881 – 호퍼를 통해 퇴비통을 공급할 때 퇴비통에 입자가 표시되지 않음
+MC-163286
+MC-163655 – Fire cannot be targeted like other blocks.
+MC-163918 – 꿀벌은 꽃가루 채집에 애니메이션을 적용하지 않음.
+MC-164184 – 크리에이티브 모드에서 아이템이 있는 셜커 상자를 깨면 블록이 잘못된 위치에 놓음
+MC-164435 – 스트림 사운드가 제대로 반복되지 않음.
+MC-164948 – 투명한 블록을 통해서는 개체 그림자가 렌더링되지 않음
+MC-165518 – Village houses desert_temple_1 and plains_temple_4 have no floor at entrance.
+MC-166245 – No sound for shearing snow golems.
+MC-166246 – 스켈레톤 말은 끈을 사용할 수 없음.
+MC-166980 – Bees become stuck wandering to the north-west after completing a task, or randomly in large numbers
+MC-167077 – 여우는 넓은 일광에서도 꿀블록 위에서 잠을 자고 있음.
+MC-167512
+MC-167561 – 주인이 아닌 플레이어가 개를 일으키거나 앉힐 수 있음.
+MC-167692 – Infested blocks do not spawn silverfish when blown up.
+MC-167989 – 몬스터가 근처에있을 때 스폰 지점이 설정되지 않음.
+MC-168319 – Fireworks sometimes don't explode when launched at the edge or under a block.
+MC-168384 – NBT 태그 “Silent:1b”는 꿀벌에게는 작동하지 않음
+MC-168540 – net.minecraft.Util.backgroundExecutor() 잘못된 스레드 이름으로 작성된 스레드
+MC-168748 – Rapid cod spawning and despawning causing performance issues.
+MC-168772 – 경험치 병이 거북이 알을 부술 수 있음
+MC-169533 – Asymmetrical walls in snowy_cartographer_house_1.
+MC-169679 – 호퍼로 퇴비통에 퇴비를 넣으면 소리가 나지 않음
+MC-169692
+MC-169715 – Misrotated block in snowy_small_house_3.
+MC-169832
+MC-169869 – Mooshroom using incorrect texture in Programmer Art.
+MC-169965 – Potion effect timers for higher levels can remain at 0:00 after the higher level has run out if multiple levels of the same effect were applied in descending order
+MC-170128
+MC-170242 – Asymmetrical walls in taiga_medium_house_4.
+MC-170273 – 다이아몬드 검은 잘못된 팔레트를 사용함.
+MC-170274 – 곡괭이 텍스처가 일치하지 않음.
+MC-170470 – At snowy_library_1, the snow block is placed next to the window, which causes ugly visual effect.
+MC-170556 – 괭이 텍스처가 일치하지 않음.
+MC-170584 – Structure taiga_meeting_point_2 from zombie villages has 1 misrotated log.
+MC-170584 – taiga_meeting_point_2 좀비 마을의 구조물에 잘못 회전된 나무 1개가 있음.
+MC-170773 – Recipe book and filtering craftable do not stay open for blast furnace and smoker when (re)loading the world.
+MC-170836 – 영혼 모래 꼭대기에 불을 붙일 수 없음.
+MC-172025 – Several misrotated blocks in snowy_medium_house_2.
+MC-173828 – 마을 교회 입구가 올바르게 생성되지 않음.
+MC-174071 – savanna_mason_1 지붕 잘림.
+MC-174072 – savanna_temple_2 에 잘못 회전된 블록이 하나 있음.
+MC-174073 – savanna_small_house_5에서 잘못 회전된 2개의 블록 .
+MC-174075 – savanna_butchers_shop_1 블록이 잘못되었음
+MC-174076 – savanna_small_house_4 창문에서 나무가 일관되지 않음
+MC-174077 – snowy_library_1 더 이상 지붕 아래에 눈이 없음.
+MC-174078 – snowy_armorer_house_2 잘못 회전된 3개의 블록
+MC-174079 – snowy_weapon_smith_1 잘못 회전된 블록
+MC-174082 – snowy_small_house_2 잘못 회전된 3개의 블록
+MC-174083 – snowy_butchers_shop_1 잘못 회전된 3개의 블록
+MC-174234 – 마을 구조 snowy_masons_house_1 에는 잘못 회전된 두 블록이 있음
+
+MC-118080 – Bows without pulling predicate animate when other bows are pulled back.
+MC-154427 – 주민들은 4개의 스택만 가져옴
+MC-172307 – 로드된 모든 타일 틱은 청크를 로드 한 후 첫번째 틱에서 즉시 실행됨.
+MC-173367 – 피스톤을 눌렀을 때 화살이 궁중에 떠 있음
+MC-175171 – Fishing bobber can get stuck on a ledge when being reeled in.
+
+
+MC-156600 – Shields appear to stop blocking when they have taken damage and are still in use.
+MC-160020 – Pulled bow changes its texture to the unpulled one when the durability changes.
+
+MC-83039 – 엔드 시티 상자가 땅에 파괴된 아이템을 생성함
+MC-91893 – 다양한 소리 자막이 없음
+MC-109248 – Extended piston head not removed when /setblock is used to place a different piston base.
+MC-115750 – 발전과제 "몬스터 사냥꾼" (몬스터 도감) 일부 적대적 몹을 죽이는데 달성하지 않음.
+MC-116756 – Reversed and inconsistent subtitles for iron trapdoor.
+MC-124428 – 색상 배열이 없지만 int 배열이 있으면 폭죽이 충돌함.
+MC-125055 – 이글루는 양조기와 화분 아이템을 떨어트려 생성함..
+MC-127316 – 일반 통계가 잘못됨
+MC-133049 – 지상 또는 천장에 나침반 아이템 액자가 있을때  올바른 위치를 가리키지 않음
+MC-154427 – 주민은 4셋만 가져감
+MC-161128 – Piston head left behind when base is quickly broken and replaced.
+MC-164129 – 엔더 드래곤 내부 히트박스가 약 200개의 블록으로 오프셋됨
+MC-164446 – 값 중 하나가 유효하지 않으면 태그가 로드되지 않아 모든 데이터 팩이 언로드됨.
+MC-169975 – Highlight players (spectators) key doesn't affect any players other than yourself.
+MC-175201 – savanna_small_house_1, savanna_small_house_2, savanna_small_house_3와 savanna_small_house_7에서 잘못된 바닥 블록
+MC-176644 – 울타리가 새로 자란 나무에 연결될때 관찰자가 인식하지 않음.
+
+MC-167608 – 리스폰 후 아이템 액자를 파괴하는 것이 이상함.
+
+MC-166358 – 가위를 사용하는발사기 소리와 일치하지 않음.
+MC-178029 – 싱글세계에서 두 번 로그인하면 청크가 뒤섞임.

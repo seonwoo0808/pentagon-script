@@ -1,0 +1,12 @@
+command /enderspawn:
+	cooldown: 1 minute
+	cooldown message: 재사용 대기시간 &l%remaining time% 남았습니다.
+	cooldown bypass: cake.nocooldown
+	executable by: players and console
+	aliases: /enderspawn
+	trigger:
+		if player is in "bskyblock_world_the_end":
+			message "&bTeleportation"
+			make player run command "/execute as @s at @s in minecraft:is_end_world run tp @s 0 49 -100" as op
+		else:
+			message "&c개인 엔더 섬만 가능합니다!"

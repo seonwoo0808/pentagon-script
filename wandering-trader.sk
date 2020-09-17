@@ -1,0 +1,18 @@
+command /떠돌이상인:
+	cooldown: 30 minute
+	cooldown message: 재사용 대기시간 &l%remaining time% 남았습니다.
+	cooldown bypass: trader.nocooldown
+	executable by: players and console
+	trigger:
+		if player is in "bskyblock_world":
+			message "&b떠돌이 상인이 소환되었습니다."
+			spawn wandering trader at player
+			add "{DespawnDelay:24000,ActiveEffects:[{Id:14b,Amplifier:1b,Duration:2000}]}" to entity-nbt of last spawned wandering trader
+			spawn trader llama at player
+			add "{DespawnDelay:24000}" to entity-nbt of last spawned trader llama
+			spawn trader llama at player
+			add "{DespawnDelay:24000}" to entity-nbt of last spawned trader llama
+			make player run command "/execute as @e[nbt={Dimension:0},distance=..7,type=wandering_trader] at @s run spreadplayers ~ ~ 50 50 false @s" as op
+			make player run command "/execute as @e[nbt={Dimension:0},distance=..7,type=trader_llama] at @s run tp @s @e[type=wandering_trader,sort=nearest,distance=..100,limit=1]" as op
+		else:
+			message "&c개인 오버월드 섬만 가능합니다!"
