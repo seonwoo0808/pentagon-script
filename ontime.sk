@@ -1,0 +1,7 @@
+every 1 minutes:
+    loop all players:
+        add 1 to {접속시간.%loop-player%}
+
+command /누적접속:
+    trigger:
+        message "%{접속시간.%player%}%분"
