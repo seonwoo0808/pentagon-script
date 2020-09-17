@@ -1,0 +1,33 @@
+on rightclick on entity:
+    if entity's name is "교환권과 엔더진주 교환":
+        if name of player's tool is "&b엔더진주 &e교환권":
+            if {조합법단계::%player's name%} = "3":
+                message "&e교환되었습니다" to player
+                give 1 ender pearl to player
+                remove 1 of player's tool from player's tool
+            else:
+                message "&4당신의 인증레벨이 낮아 거래할수 없습니다" to player
+        else:
+            message "&4교환권을 손에 들어주세요" to player   
+
+command /엔더진주교환권:
+    trigger:
+        if sender is op:
+            give 1 paper named "&b엔더진주 &e교환권" with lore "&7엔더진주로 바꿀수 있다" to player
+
+on rightclick on entity:
+    if entity's name is "교환권과 tnt 교환":
+        if name of player's tool is "&btnt &e교환권":
+            if {조합법단계::%player's name%} = "3":
+                message "&e교환되었습니다" to player
+                give 1 tnt to player
+                remove 1 of player's tool from player's tool
+            else:
+                message "&4당신의 인증레벨이 낮아 거래할수 없습니다" to player
+        else:
+            message "&4교환권을 손에 들어주세요" to player   
+
+command /tnt교환권:
+    trigger:
+        if sender is op:
+            give 1 paper named "&btnt &e교환권" with lore "&7tnt로 바꿀수 있다" to player
