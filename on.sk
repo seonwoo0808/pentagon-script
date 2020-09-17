@@ -1,0 +1,3 @@
+on join:
+	message "<ttp:클릭하면 스폰으로 이동!><cmd:/spawn>[스폰]<reset> 으로 가려면 누르세요"
+	message "<ttp:클릭하면 스블으로 이동!><cmd:/is>[스카이블럭]<reset> 으로 가려면 누르세요"
