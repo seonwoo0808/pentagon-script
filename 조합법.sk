@@ -5,3 +5,43 @@ command /조합법 [<string>]:
         
         execute console command "discord broadcast http://www.mcbekr.kr/bbs/search.php?sfl=wr_subject%%7C%%7Cwr_content&sop=and&stx=%{조합법}%"
         execute console command "discord broadcast 조합법 검색 결과입니다"
+
+command /3단계 [<string>]:
+    trigger:
+        if sender is op:
+            set {선택된플레이어} to arg 1
+            set {조합법단계::%{선택된플레이어}%} to "3"
+            execute console command "minecraft:give %{선택된플레이어}% minecraft:book{display:{Name:'{""text"":""3단계 설명""}',Lore:['{""text"":""3단계 아이템은 조합이 아니라 구매로 획득합니다""}']}}"
+        else:
+            message "이 명령어는 오퍼레이터만 사용 할 수 있다"
+
+command /2단계 [<string>]:
+    trigger:
+        if sender is op:
+            set {선택된플레이어} to arg 1
+            set {조합법단계::%{선택된플레이어}%} to "2"
+            execute console command "minecraft:give %{선택된플레이어}% minecraft:honey_bottle{display:{Name:'{""text"":""2단계조합법 교환권""}',Lore:['{""text"":""이것도 교환하세요!""}']}}"
+        else:
+            message "이 명령어는 오퍼레이터만 사용 할 수 있다"
+
+command /1단계 [<string>]:
+    trigger:
+        if sender is op:
+            set {선택된플레이어} to arg 1
+            set {조합법단계::%{선택된플레이어}%} to "1"
+            execute console command "minecraft:give %{선택된플레이어}% minecraft:honey_bottle{display:{Name:'{""text"":""1단계조합법 교환권""}',Lore:['{""text"":""교환하세요!""}']}}"
+        else:
+            message "이 명령어는 오퍼레이터만 사용 할 수 있다"
+
+command /0단계 [<string>]:
+    trigger:
+        if sender is op:
+            set {선택된플레이어} to arg 1
+            set {조합법단계::%{선택된플레이어}%} to 0
+            
+        else:
+            message "이 명령어는 오퍼레이터만 사용 할 수 있다"
+
+command /levelinfo:
+    trigger:
+        message "당신은 %{조합법단계::%player%}%단계 인증유저입니다" to player
