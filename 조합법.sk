@@ -62,3 +62,34 @@ command /인증목록:
 		message "/3단계 // 밴아이템이 모두 언락시키 수 있다"
 		message "/2단계 // 밴아이템을 tnt,엔더진주를 제외하고 만들 수 있다"
 		message "/1단계 // 밴아이템 중에서 피스톤,호퍼만 만들 수 있다"
+
+on place of tnt:
+    if {조합법단계::%player%} is not "3":
+        cancel event
+        remove 1 of player's tool from player's tool
+        message "3단계 인증이 필요합니다"
+on place of hopper:
+    if {조합법단계::%player%} is not "1" or "2" or "3":
+        cancel event
+        remove 1 of player's tool from player's tool
+        message "1단계 인증이 필요합니다"
+on place of piston:
+    if {조합법단계::%player%} is not "1" or "2" or "3":
+        cancel event
+        remove 1 of player's tool from player's tool
+        message "1단계 인증이 필요합니다"
+on place of sticky piston:
+    if {조합법단계::%player%} is not "2" or "3":
+        cancel event
+        remove 1 of player's tool from player's tool
+        message "2단계 인증이 필요합니다"
+on place of dispenser:
+    if {조합법단계::%player%} is not "2" or "3":
+        cancel event
+        remove 1 of player's tool from player's tool
+        message "2단계 인증이 필요합니다"
+on spawn:
+    if entity is "tnt minecart":
+        cancel event
+        remove 1 of player's tool from player's tool
+        message "사용할 수 없습니다"
