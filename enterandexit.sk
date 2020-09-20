@@ -1,6 +1,7 @@
 on first join:
     broadcast "&e새로운 신입 &b유저 &e[&d%player%&e]가 등장했다!"
     execute console command "minecraft:recipe give %player% *"
+    execute console command "minecraft:recipe take %player% minecraft:tnt_minecart"
     execute console command "minecraft:recipe take %player% minecraft:hopper"
     execute console command "minecraft:recipe take %player% minecraft:tnt"
     execute console command "minecraft:recipe take %player% minecraft:dispenser"
@@ -13,18 +14,20 @@ on join:
     if {조합법단계::%player's name%} is "1" or "2" or "3":
         
         if {조합법단계::%player's name%} = "1":
+            execute console command "minecraft:recipe take %player% minecraft:tnt_minecart"
             execute console command "minecraft:recipe take %player% minecraft:tnt"
             execute console command "minecraft:recipe take %player% minecraft:dispenser"
             execute console command "minecraft:recipe take %player% minecraft:sticky_piston"
             message "당신은 %{조합법단계::%player's name%}%단계 인증유저입니다" to player
         if {조합법단계::%player's name%} = "2":
             execute console command "minecraft:recipe take %player% minecraft:tnt"
+            execute console command "minecraft:recipe take %player% minecraft:tnt_minecart"
             message "당신은 %{조합법단계::%player's name%}%단계 인증유저입니다" to player 
         else:
             
             message "당신은 %{조합법단계::%player's name%}%단계 인증유저입니다" to player 
     else:
-        
+        execute console command "minecraft:recipe take %player% minecraft:tnt_minecart"
         execute console command "minecraft:recipe take %player% minecraft:hopper"
         execute console command "minecraft:recipe take %player% minecraft:piston"
         execute console command "minecraft:recipe take %player% minecraft:tnt"
