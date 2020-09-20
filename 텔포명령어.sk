@@ -116,19 +116,19 @@ command /jumpmap [<string>]:
         
         if arg 1 is "easy":
             execute console command "mvtp %player% jumpmap"
-            execute console command "minecraft:tp %player% 36 51 -171"
+            execute console command "tp %player% 36 51 -171"
             message "점프맵으로 이동합니다" to player
         if arg 1 is "hard":
             execute console command "mvtp %player% jumpmap"
-            execute console command "minecraft:tp %player% 36 51 36"
+            execute console command "tp %player% 36 51 36"
             message "점프맵으로 이동합니다" to player
         if arg 1 is "normal":
             execute console command "mvtp %player% jumpmap"
-            execute console command "minecraft:tp %player% -266 57 -170"
+            execute console command "tp %player% -266 57 -170"
             message "점프맵으로 이동합니다" to player
         if arg 1 is "extreme":
             execute console command "mvtp %player% jumpmap"
-            execute console command "minecraft:tp %player% -266 57 -170"
+            execute console command "tp %player% -266 57 -170"
             message "점프맵으로 이동합니다" to player
         if arg 1 is "":
             execute console command "mvtp %player% jumpmap"
