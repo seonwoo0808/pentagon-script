@@ -31,3 +31,10 @@ command /tnt교환권:
     trigger:
         if sender is op:
             give 1 paper named "&btnt &e교환권" with lore "&7tnt로 바꿀수 있다" to player
+
+on rightclick on entity:
+    if entity's name is "스카이블럭 가기":
+        execute player command "is"
+on rightclick on entity:
+    if entity's name is "뉴비존 가기":
+        execute console command "minecraft:tp %player% -14 209 201"
