@@ -2,6 +2,7 @@ every 1 minutes:
     loop all players:
         add 1 to {접속시간.%loop-player%}
 
-command /누적접속:
+command /누적접속 [<string>]:
     trigger:
-        message "%{접속시간.%player%}%분"
+        set {대상} to arg 1
+        message "&e%{대상}%&f님의 접속시간은 &e%{접속시간.%{대상}%}%분&f입니다"
