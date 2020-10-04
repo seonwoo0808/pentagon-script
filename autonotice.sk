@@ -35,7 +35,7 @@ every 40 seconds:
 
     if {공지사항} is 6:
         set {공지사항} to 7
-        broadcast "[§c자동공지&f]§5---&e디스코드 서버 링크 https://discord.gg/xTQKyR3"
+        broadcast "[§c자동공지&f]§5---&e디스코드 미가입시 제제 대상입니다---[디스코드 서버 링크: https://discord.gg/xTQKyR3]"
         stop    
     if {공지사항} is 7:
         set {공지사항} to 8
