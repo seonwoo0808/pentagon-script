@@ -20,7 +20,7 @@ every 40 seconds:
         
     if {공지사항} is 3:
         set {공지사항} to 4
-        broadcast "[§c자동공지&f]§5---&e복돌은 막혔습니다"
+        broadcast "[§c자동공지&f]§5---&e300초 동안 잠수하시면 자동킥 당합니다"
         stop
 
     if {공지사항} is 4:

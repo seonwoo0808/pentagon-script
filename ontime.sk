@@ -1,8 +1,15 @@
 every 1 minutes:
     loop all players:
         add 1 to {접속시간.%loop-player%}
+on Skript start:
+    set {serverontime} to 1
+every 1 minutes:
+    add 1 to {serverontime} 
 
 command /누적접속 [<string>]:
     trigger:
         set {대상} to arg 1
         message "&e%{대상}%&f님의 접속시간은 &e%{접속시간.%{대상}%}%분&f입니다"
+command /온타임:
+    trigger:
+        message "&b서버 온타임&f: [&e%{serverontime}%&f]분"

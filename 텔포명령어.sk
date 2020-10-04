@@ -1,6 +1,6 @@
 command /trade:
     trigger:
-        execute console command "mvtp %player% world"
+        execute console command "mw move %player% world"
         wait 1 ticks
         execute console command "minecraft:tp %player% 166 66 122"
 command /killme:
@@ -10,7 +10,7 @@ command /killme:
 
 command /world:
     trigger:
-        execute console command "mvtp %player% world"
+        execute console command "mw move %player% world"
         execute console command "minecraft:tp %player% 43 65 103"
 
 command /gojail:
@@ -29,22 +29,22 @@ command /menu:
 
 command /battle:
     trigger:
-        execute console command "mvtp %player% world"
+        execute console command "mw move %player% world"
         execute console command "minecraft:tp %player% 72 112 243"
 
 command /icespawn:
     trigger:
-        execute console command "mvtp %player% world"
+        execute console command "mw move %player% world"
         execute console command "minecraft:tp %player% -2757.5 67 4636"
 
 command /junglespawn:
     trigger:
-        execute console command "mvtp %player% world"
+        execute console command "mw move %player% world"
         execute console command "minecraft:tp %player% -8566.5 63 5780.5"
 
 command /forrestspawn:
     trigger:
-        execute console command "mvtp %player% world"
+        execute console command "mw move %player% world"
         execute console command "minecraft:tp %player% 5528.5 64 8536.5"
 
 command /getbook:
@@ -74,16 +74,16 @@ command /getcooltime:
 
 command /townhall:
     trigger:
-        execute console command "mvtp %player% townhall2"
+        execute console command "mw move %player% townhall2"
 
 command /police:
     trigger:
-        execute console command "mvtp %player% world"
+        execute console command "mw move %player% world"
         execute console command "minecraft:tp %player% 68 69 141"
 
 command /law:
     trigger:
-        execute console command "mvtp %player% law"
+        execute console command "mw move %player% law"
         
 command /oplaw:
     trigger:
@@ -95,7 +95,7 @@ command /보석금:
         
         if player is in the region "jail":
             if {쿨타임::%player%::보석금::초} is not set:
-                execute console command "spicord send chat 보석금요청--------[%player%]님이 보석금을 요청했습니다"
+                execute console command "mail send maeja 보석금요청--------[%player%]님이 보석금을 요청했습니다"
                 message "보석금을 요청했습니다" to player
                 set {쿨타임::%player%::보석금::초} to 300
                 loop 300 times:
@@ -115,35 +115,35 @@ command /jumpmap [<string>]:
     trigger:
         
         if arg 1 is "easy":
-            execute console command "mvtp %player% jumpmap"
+            execute console command "mw move %player% jumpmap"
             execute console command "tp %player% 36 51 -171"
             message "점프맵으로 이동합니다" to player
         if arg 1 is "hard":
-            execute console command "mvtp %player% jumpmap"
+            execute console command "mw move %player% jumpmap"
             execute console command "tp %player% 36 51 36"
             message "점프맵으로 이동합니다" to player
         if arg 1 is "normal":
-            execute console command "mvtp %player% jumpmap"
+            execute console command "mw move %player% jumpmap"
             execute console command "tp %player% -266 57 -170"
             message "점프맵으로 이동합니다" to player
         if arg 1 is "extreme":
-            execute console command "mvtp %player% jumpmap"
+            execute console command "mw move %player% jumpmap"
             execute console command "tp %player% -266 57 -170"
             message "점프맵으로 이동합니다" to player
         if arg 1 is "":
-            execute console command "mvtp %player% jumpmap"
+            execute console command "mw move %player% jumpmap"
             message "점프맵으로 이동합니다" to player
         if arg 1 is not "easy" or "hard" or "normal" or "extreme" or "":
             message "&4명령어 사용법이 잘못됨" to player
 
 command /nether:
     trigger:
-        execute console command "mvtp %player% world"
+        execute console command "mw move %player% world"
         execute console command "minecraft:tp %player% -79 66 61"  
 
 command /casino:
     trigger:
-        execute console command "mvtp %player% casino"     
+        execute console command "mw move %player% casino"     
 
 command /도움말:
     trigger:
@@ -151,14 +151,14 @@ command /도움말:
 
 command /apt:
     trigger:
-        execute console command "mvtp %player% home"   
+        execute console command "mw move %player% home"   
 
 
 
 command /pentagon:
     trigger:
         if player is op:
-            execute console command "mvtp %player% pentagon"
+            execute console command "mw move %player% pentagon"
         else:
             message "&4제작중이므로 오퍼레이터만 이동할 수 있습니다" to player
         

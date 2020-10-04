@@ -38,3 +38,16 @@ on rightclick on entity:
 on rightclick on entity:
     if entity's name is "뉴비존 가기":
         execute console command "minecraft:tp %player% -14 209 201"
+on rightclick on entity:
+    if entity's name is "롤러코스터 교환권":
+        if name of player's tool is "&b롤러코스터 &e교환권":
+            execute console command "mw move %player% jumpmap"
+            execute console command "tp %player% -139 51 -66"
+            execute console command "minecraft:give %player% minecraft:minecart"
+            remove 1 of player's tool from player's tool
+        else:
+            message "&4교환권을 손에 들어주세요" to player       
+command /롤러코스터교환권:
+    trigger:
+        if sender is op:
+            give 1 paper named "&b롤러코스터 &e교환권" with lore "&7롤러코스터를 탈수 있다" to player

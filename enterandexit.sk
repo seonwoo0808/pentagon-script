@@ -10,7 +10,7 @@ on first join:
 
 on join:
     broadcast "&e서버에 [&d%player%&e]님이 접속하였습니다."
-
+    set {잠수시간.%player%} to 0
     if {조합법단계::%player's name%} is "1" or "2" or "3":
         
         if {조합법단계::%player's name%} = "1":
