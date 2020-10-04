@@ -1,0 +1,9 @@
+on place of grass block:
+    
+    if name of player's tool is "&e랜덤넘버":
+        set {randomnum} to random integer between 1 and 100
+        execute console command "broadcast %{randomnum}%"
+command /getrandomnum:
+    trigger:
+        if player is op:
+            give 1 grass block named "&e랜덤넘버" with lore "&b준비하시고 설치하세요" to player
