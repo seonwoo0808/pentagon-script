@@ -32,7 +32,7 @@ command /2단계 [<string>]:
 
 command /1단계 [<string>]:
     trigger:
-        if sender is op:
+        if sender is op or console:
             set {선택된플레이어} to arg 1
             set {조합법단계::%{선택된플레이어}%} to "1"
             execute console command "minecraft:give %{선택된플레이어}% minecraft:honey_bottle{display:{Name:'{""text"":""1단계조합법 교환권""}',Lore:['{""text"":""교환하세요!""}']}}"
@@ -53,9 +53,10 @@ command /0단계 [<string>]:
         else:
             message "이 명령어는 오퍼레이터만 사용 할 수 있다"
 
-command /levelinfo:
+command /인증정보 [<string>]:
     trigger:
-        message "당신은 %{조합법단계::%player%}%단계 인증유저입니다" to player
+        set {선택된플레이어} to arg 1
+        message "당신은 %{조합법단계::%{선택된플레이어}%}%단계 인증유저입니다" to sender
 		
 command /인증목록:
 	trigger:
