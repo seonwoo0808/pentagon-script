@@ -1,0 +1,25 @@
+every 1 seconds:
+    loop all players:
+        if {움직임.%loop-player%} is "0":
+            add 1 to {잠수시간.%loop-player%}
+        else:
+            set {잠수시간.%loop-player%} to 0
+        if {잠수시간.%loop-player%} is 300:
+            execute console command "kick %loop-player% 당신은 300초 동안 잠수여서 자동킥 당하셨습니다"
+            
+every 1 tick:
+    loop all players:
+        set {location.%loop-player%} to loop-player's location
+        if {location.%loop-player%} is {previousloc.%loop-player%}:
+            set {previousloc.%loop-player%} to loop-player's location
+            set {움직임.%loop-player%} to "0"
+        else:
+            set {previousloc.%loop-player%} to loop-player's location
+            set {움직임.%loop-player%} to "1"
+
+command /잠수:
+    trigger:
+        message "%{잠수시간.%player%}%초동안 가만히 계셨습니다" to player
+        message "%{location.%player%}%" to player
+        
+        
